@@ -3,3 +3,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+tweetgreet/*
+!tweetgreet/tweetgreet.py
+!tweetgreet/__init__.py
