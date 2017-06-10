@@ -1,1 +1,1 @@
-worker: xkcdBot.py
+worker: python xkcdBot/xkcdBot.py
