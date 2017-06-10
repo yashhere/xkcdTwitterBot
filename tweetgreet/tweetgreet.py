@@ -1,5 +1,4 @@
 import tweepy
-from secret import *
 import requests
 import json
 import urllib.request
@@ -8,7 +7,8 @@ import datetime
 import os
 import logging
 import random
-logging.basicConfig(filename="sample.log", level=logging.INFO,
+from secret import *
+logging.basicConfig(filename="twitterBot.log", level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -34,11 +34,13 @@ def getComic(url):
         imgNum = data['num']
         return [imgLink, imgTitle, imgDescription, imgNum]
 
+    logger.error("Status code !== 200")
     return [None, None, None, None]
 
 
 def getComicUrl(xkcd_num):
     if xkcd_num == -1:
+        logger.warn("List Exhausted")
         url = "http://xkcd.com/info.0.json"
         logger.info("Fetching latest comic...")
         return getComic(url)
