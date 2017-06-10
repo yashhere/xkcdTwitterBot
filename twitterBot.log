@@ -1,0 +1,3 @@
+2017-06-10 14:00:56,514 - __main__ - INFO - Fetching comic from list
+2017-06-10 14:01:02,035 - tweepy.binder - INFO - PARAMS: {'status': b'Algorithms #1667 #xkcd'}
+2017-06-10 14:01:04,683 - __main__ - INFO - XKCD tweeted

@@ -118,6 +118,6 @@ if __name__ == "__main__":
             filename = imgTitle + ".png"
             status = imgTitle + " #" + str(imgNum) + " #xkcd"
             urllib.request.urlretrieve(imgLink, filename=filename)
-            # tweetXKCD(filename, status)
+            tweetXKCD(filename, status)
             os.remove(filename)
             waitForOneWeek()
